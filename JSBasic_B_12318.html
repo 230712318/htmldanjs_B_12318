@@ -40,12 +40,27 @@
   <script>
      // TODO: Buat fungsi ubahBiru() untuk mengubah teks di elemen dengan id="teks" menjadi "Teks sudah berubah menjadi biru!" 
      // dan warnanya menjadi biru.
+     function ubahBiru(){
+      const paragraf = document.getElementById("teks");
+      paragraf.innerHTML = "Teks sudah berubah menjadi biru!";
+      paragraf.style.color = "blue";
+     }
     
     // TODO: Buat fungsi ubahMerah() untuk mengubah teks di elemen dengan id="teks" menjadi "Sekarang teks berwarna merah!" 
     // dan warnanya menjadi merah.
+    function ubahMerah(){
+      const paragraf = document.getElementById("teks");
+      paragraf.innerHTML = "Sekarang teks berwarna merah!";
+      paragraf.style.color = "red";
+     }
     
     // TODO: Buat fungsi ubahHijau() untuk mengubah teks di elemen dengan id="teks" menjadi "Sekarang teks berwarna hijau!" 
     // dan warnanya menjadi hijau.
+    function ubahHijau(){
+      const paragraf = document.getElementById("teks");
+      paragraf.innerHTML = "Sekarang teks berwarna hijau!";
+      paragraf.style.color = "hijau";
+     }
 
     // Clue ketiga function diatas : gunakan document.getElementById, paragraf.innerHTML, dan paragraf.style.color
     
@@ -54,12 +69,37 @@
     // Jika kosong, tampilkan alert "Silakan isi nama dulu." 
     // Jika ada isinya, tampilkan alert "Halo, [nama]! Selamat Belajar HTML & JS :D".
     // Clue : gunakan document.getElementById("inputNama").value dan gunakan statement if else.
-    
+    Function tampilkanNama(){
+      const isiNama = documentgetElementById("inputNama").value;
+      
+      if(isiNama === "") {
+        alert("Silakan isi nama dulu.");
+      } else{
+        alert("Halo, " +isiNama+ "! Selamat Belajar HTML & JS :D");
+      }
+      
+    }
+
     // TODO: Buat fungsi hitungKuadrat() yang mengambil nilai dari input dengan id="angka". 
     // Jika kosong, tampilkan pesan "Masukkan angka terlebih dahulu." di elemen dengan id="hasil". 
     // Jika ada isinya, hitung kuadrat angka tersebut dan tampilkan "Hasil kuadrat dari [angka] adalah [hasil]" 
     // di elemen dengan id="hasil".
     // Clue : gunakan document.getElementById("angka").value dan gunakan hasil.innerHTML.
+
+    function hitungKuadrat(){
+      const hitungAngka = documentgetElementById("angka").value;
+      const HasilPerhitungan = document.getElementById(hasil);
+      
+
+      if(hitungAngka === "") {
+        hasil.innerHTML = "Masukkan angka terlebih dahulu.";
+      } else{
+        const angka = Number(angkaInput);
+        const total = angka * angka;
+          
+        hasil.innerHTML = "Hasil kuadrat dari " +angka+ " adalah " +total+"";
+      }
+    }
   </script>
 </body>
 </html>
