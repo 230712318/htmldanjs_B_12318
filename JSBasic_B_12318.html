@@ -59,7 +59,7 @@
     function ubahHijau(){
       const paragraf = document.getElementById("teks");
       paragraf.innerHTML = "Sekarang teks berwarna hijau!";
-      paragraf.style.color = "hijau";
+      paragraf.style.color = "green";
      }
 
     // Clue ketiga function diatas : gunakan document.getElementById, paragraf.innerHTML, dan paragraf.style.color
@@ -69,8 +69,8 @@
     // Jika kosong, tampilkan alert "Silakan isi nama dulu." 
     // Jika ada isinya, tampilkan alert "Halo, [nama]! Selamat Belajar HTML & JS :D".
     // Clue : gunakan document.getElementById("inputNama").value dan gunakan statement if else.
-    Function tampilkanNama(){
-      const isiNama = documentgetElementById("inputNama").value;
+    function tampilkanNama(){
+      const isiNama = document.getElementById("inputNama").value;
       
       if(isiNama === "") {
         alert("Silakan isi nama dulu.");
@@ -87,14 +87,14 @@
     // Clue : gunakan document.getElementById("angka").value dan gunakan hasil.innerHTML.
 
     function hitungKuadrat(){
-      const hitungAngka = documentgetElementById("angka").value;
+      const hitungAngka = document.getElementById("angka").value;
       const HasilPerhitungan = document.getElementById(hasil);
       
 
       if(hitungAngka === "") {
         hasil.innerHTML = "Masukkan angka terlebih dahulu.";
       } else{
-        const angka = Number(angkaInput);
+        const angka = Number(hitungAngka);
         const total = angka * angka;
           
         hasil.innerHTML = "Hasil kuadrat dari " +angka+ " adalah " +total+"";
